@@ -1,15 +1,29 @@
-<h2>Hello</h2>
+<span>ng-group 10</span>
 
-<app-typescript></app-typescript>
+<ul>
+    <li>
+        <button [routerLink]="['/', 'data-binding']">Data binding</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'event-binding']">Event binding</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'typescript']">Typescript</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'built-in-directives']">Built-in directives</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'custom-pipes']">Custom pipes</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'component-interaction']">Component interaction</button>
+    </li>
+    <li>
+        <button [routerLink]="['/', 'template-driven']">Template driven</button>
+    </li>
+</ul>
 
-<app-data-binding></app-data-binding>
-
-<app-event-binding></app-event-binding>
-
-<app-built-in-directives></app-built-in-directives>
-
-<app-custom-pipes></app-custom-pipes>
-
-<app-component-interaction></app-component-interaction>
-
-<app-template-driven></app-template-driven>
+<div>
+    <router-outlet></router-outlet>
+</div>

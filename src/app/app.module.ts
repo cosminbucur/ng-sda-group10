@@ -1,3 +1,5 @@
+import { CoreModule } from './core/core.module';
+import { appRouting } from './app.routes';
 import { SharedModule } from './shared/shared.module';
 import { ZeroPaddingPipe } from './shared/pipes/zero-padding.pipe';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,16 +28,14 @@ import { TemplateDrivenComponent } from './features/forms/template-driven/templa
     ZeroPaddingPipe,
 
     ComponentInteractionComponent,
-
     ParentComponent,
-
     ChildComponent,
-
     TemplateDrivenComponent
   ],
   imports: [
-    BrowserModule,
-    SharedModule
+    CoreModule,
+    SharedModule,
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
