@@ -1,0 +1,39 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+
+    <!-- <fieldset ngModelGroup="name">
+
+    </fieldset> -->
+
+    <!-- first name -->
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" ngModel>
+    </div>
+
+    <!-- email -->
+    <div>
+        <label>Email</label>
+        <input 
+            type="email" 
+            name="email" 
+            [(ngModel)]="model.email" 
+            #email="ngModel" 
+            required>
+    </div>
+    
+<div>
+    <label>Password</label>
+    <input 
+        type="password" 
+        name="password" 
+        [(ngModel)]="model.password" 
+        required>
+</div>
+
+<button type="submit" [disabled]="f.invalid">Submit</button>
+</form>
+
+<div>
+    <pre>{{ f.value | json }}</pre>
+</div>
+

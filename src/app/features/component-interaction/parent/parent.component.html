@@ -1,0 +1,10 @@
+<div class="parent">
+  <h2>In parent component</h2>
+
+  <p>Parent message: {{ parentMessage }}</p>
+ <p>child replied: "{{ childReply }}"</p>
+  <app-child 
+    [childInput]="parentMessage"
+    (childOutputEvent)="parentCatchEvent($event)">
+  </app-child>
+</div>

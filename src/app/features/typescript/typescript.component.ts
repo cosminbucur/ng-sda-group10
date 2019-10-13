@@ -1,3 +1,13 @@
+import { DemoPromisses as DemoPromises } from './promises';
+import { DemoSets } from './set';
+import { DemoMaps } from './maps';
+import { DemoIteration } from './iteration';
+import { DemoObjectDestructuring } from './object-destructuring';
+import { DemoFatArrow } from './fat-arrow';
+import { DemoStrings } from './strings';
+import { DemoVariables } from './variables';
+import { DemoConst } from './const';
+import { DemoLet } from './let';
 import { Component, OnInit } from '@angular/core';
 import { Role } from './role';
 import { Signal } from './signal';
@@ -7,42 +17,51 @@ import { Signal } from './signal';
   templateUrl: './typescript.component.html',
   styleUrls: ['./typescript.component.scss']
 })
-export class TypescriptComponent implements OnInit {
-  name = 'Paul';
-  age = 36;
-  married = true;
-  itCompanies: Array<string> = ['IBM', 'Microsoft', 'Google'];
-  brands: string[] = ['Apple', 'Dell', 'HP'];
+export class TypescriptComponent {
 
   constructor() {
-    this.iterateEnum();
-    this.getKeysOfStringEnum();
-  }
+    // this.iterateEnum();
+    // this.getKeysOfStringEnum();
 
-  ngOnInit() {}
+    // const demoLet: DemoLet = new DemoLet();
+    // demoLet.testLocalVariables();
 
-  // iterate enum
-  public iterateEnum(): void {
-    console.log('iterate enum: ');
+    // const demoConst: DemoConst = new DemoConst();
+    // demoConst.testConst();
+    // demoConst.mutateObject();
+    // demoConst.makeObjectImmutable();
 
-    for (const role in Role) {
-      if (isNaN(Number(role))) {
-        console.log(role);
-      }
-    }
-  }
+    // const demoVariables: DemoVariables = new DemoVariables();
+    // demoVariables.declareVariables();
 
-  public getKeysOfStringEnum(): void {
-    console.log('iterate keys of string enum: ');
+    // const demoStrings: DemoStrings = new DemoStrings();
+    // demoStrings.templateString();
+    // demoStrings.variablesSubstitution();
 
-    Object.keys(Signal).forEach(key => console.log(key));
-  }
+    // const demoFatArrow: DemoFatArrow = new DemoFatArrow();
+    // demoFatArrow.testFatArrow();
+    // demoFatArrow.testFatArrowWithArguments();
 
-  public iterateEnumKeys() {
-    console.log('iterate enum keys: ');
+    // const demoObjectDestructuring: DemoObjectDestructuring=  new DemoObjectDestructuring();
+    // demoObjectDestructuring.objectDestructuring();
 
-    Object.keys(Role)
-      .filter(key => !isNaN(Number(Role[key])))
-      .forEach(key => console.log(Role[key]));
+    // const demoIteration: DemoIteration = new DemoIteration();
+    // demoIteration.testFor();
+    // demoIteration.testForInObject();
+    // demoIteration.testForInArray();
+    // demoIteration.testForOf();
+
+    // const demoMaps: DemoMaps = new DemoMaps();
+    // demoMaps.testMap();
+
+    // const demoSets: DemoSets = new DemoSets();
+    // demoSets.testSets();
+
+    const demoPromises: DemoPromises = new DemoPromises();
+    // demoPromises.testSuccessPromise();
+    // demoPromises.testErrorPromise();
+    // demoPromises.promiseChainability();
+    // demoPromises.promiseErrorHandling();
+    demoPromises.promiseInTypescript();
   }
 }
