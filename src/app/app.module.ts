@@ -1,3 +1,4 @@
+import { CrudModule } from './features/crud/crud.module';
 import { CoreModule } from './core/core.module';
 import { appRouting } from './app.routes';
 import { SharedModule } from './shared/shared.module';
@@ -15,6 +16,9 @@ import { ComponentInteractionComponent } from './features/component-interaction/
 import { ParentComponent } from './features/component-interaction/parent/parent.component';
 import { ChildComponent } from './features/component-interaction/parent/child/child.component';
 import { TemplateDrivenComponent } from './features/forms/template-driven/template-driven.component';
+import { NotificationsComponent } from './features/notifications/notifications.component';
+import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
+import { HttpObservablesComponent } from './features/http/http-observables/http-observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,12 +34,16 @@ import { TemplateDrivenComponent } from './features/forms/template-driven/templa
     ComponentInteractionComponent,
     ParentComponent,
     ChildComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    NotificationsComponent,
+    ModelDrivenComponent,
+    HttpObservablesComponent
   ],
   imports: [
     CoreModule,
     SharedModule,
-    appRouting
+    appRouting,
+    CrudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

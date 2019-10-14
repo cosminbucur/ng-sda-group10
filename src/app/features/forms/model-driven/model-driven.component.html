@@ -1,0 +1,54 @@
+<mat-card>
+    <form novalidate 
+        [formGroup]="registrationForm" 
+        (ngSubmit)="onSubmit()">
+
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="First name" 
+            formControlName="firstName"
+            type="text">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="Last name" 
+            formControlName="lastName"
+            type="text">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="Email" 
+            formControlName="email"
+            type="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="Password" 
+            formControlName="password"
+            type="password">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Language</mat-label>
+            <mat-select formControlName="language">
+                <mat-option *ngFor="let language of languages"
+                    [value]="language.value">
+                    {{ language.viewValue }}                    
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="secondary" (click)="onCancel($event)">Cancel</button>
+
+        <pre>{{ registrationForm.value | json }}</pre>
+    </form>
+
+</mat-card>

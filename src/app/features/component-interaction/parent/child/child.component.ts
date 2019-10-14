@@ -6,16 +6,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-
   @Input() childInput: string;
-  
   @Output() childOutputEvent = new EventEmitter<string>();
+
   public childReply = 'ok fine!';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public childEmitOutput(): void {
     console.log('child emit output');

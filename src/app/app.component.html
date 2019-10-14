@@ -1,28 +1,37 @@
 <span>ng-group 10</span>
 
-<ul>
-    <li>
-        <button [routerLink]="['/', 'data-binding']">Data binding</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'event-binding']">Event binding</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'typescript']">Typescript</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'built-in-directives']">Built-in directives</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'custom-pipes']">Custom pipes</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'component-interaction']">Component interaction</button>
-    </li>
-    <li>
-        <button [routerLink]="['/', 'template-driven']">Template driven</button>
-    </li>
-</ul>
+<mat-list>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.TYPESCRIPT]">Typescript</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.DATA_BINDING]">Data binding</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.DATA_BINDING]">Event binding</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.BUILT_IN_DIRECTIVES]">Built-in directives</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.PIPES]">Pipes</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.COMPONENT_INTERACTION]">Component interaction</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.TEMPLATE_DRIVEN_FORMS]">Template driven forms</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.MODEL_DRIVEN_FORMS]">Model driven forms</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.NOTIFICATIONS]">Notifications</button>
+    </mat-list-item>
+    <mat-list-item>
+        <button mat-button [routerLink]="['/', appRoutesNames.CRUD]">CRUD</button>
+    </mat-list-item>
+</mat-list>
 
 <div>
     <router-outlet></router-outlet>

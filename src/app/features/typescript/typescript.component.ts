@@ -57,11 +57,11 @@ export class TypescriptComponent {
     // const demoSets: DemoSets = new DemoSets();
     // demoSets.testSets();
 
-    // const demoPromises: DemoPromises = new DemoPromises();
+    const demoPromises: DemoPromises = new DemoPromises();
     // demoPromises.testSuccessPromise();
     // demoPromises.testErrorPromise();
     // demoPromises.promiseChainability();
     // demoPromises.promiseErrorHandling();
-    // demoPromises.promiseInTypescript();
+    demoPromises.promiseInTypescript();
   }
 }

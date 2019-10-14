@@ -1,39 +1,45 @@
-<form #f="ngForm" (ngSubmit)="onSubmit()">
+<mat-card>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
 
-    <!-- <fieldset ngModelGroup="name">
+        <!-- first name -->
+        <mat-form-field>
+            <input matInput placeholder="First name" type="text" name="firstName" ngModel>
+        </mat-form-field>
 
-    </fieldset> -->
+        <!-- email -->
+        <mat-form-field>
+            <input 
+                matInput 
+                placeholder="Email"
+                type="email" 
+                name="email" 
+                [(ngModel)]="model.email" 
+                #email="ngModel" 
+                required
+                pattern="[^ @]*@[^ @]*">
+            <div [ngClass]="{ 'invalid-feedback': f.form.controls.email?.invalid }">
+                Wrong email format
+            </div>
+        </mat-form-field>
+        
+        <!-- password -->
+        <mat-form-field>
+            <input 
+                matInput placeholder="Password"
+                type="password" 
+                name="password" 
+                [(ngModel)]="model.password" 
+                required>
+        </mat-form-field>
 
-    <!-- first name -->
-    <div>
-        <label>First Name</label>
-        <input type="text" name="firstName" ngModel>
-    </div>
-
-    <!-- email -->
-    <div>
-        <label>Email</label>
-        <input 
-            type="email" 
-            name="email" 
-            [(ngModel)]="model.email" 
-            #email="ngModel" 
-            required>
-    </div>
-    
-<div>
-    <label>Password</label>
-    <input 
-        type="password" 
-        name="password" 
-        [(ngModel)]="model.password" 
-        required>
-</div>
-
-<button type="submit" [disabled]="f.invalid">Submit</button>
-</form>
-
-<div>
+        <button mat-flat-button 
+            color="primary" 
+            type="submit" 
+            [disabled]="f.invalid">Submit
+        </button>
+    </form>
+</mat-card>
+<mat-card>
     <pre>{{ f.value | json }}</pre>
-</div>
+</mat-card>
 

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "jon",
+      "lastName": "snow",
+      "email": "jonsnow@gmail.com",
+      "password": "top"
+    },
+    {
+      "id": 2,
+      "firstName": "tyrion",
+      "lastName": "lanister",
+      "email": "tyrionlanister@gmail.com",
+      "password": "secret"
+    },
+    {
+      "id": 3,
+      "firstName": "test",
+      "lastName": "last",
+      "email": "test@gmail.com",
+      "password": "hello"
+    }
+  ]
+}
